@@ -26,6 +26,5 @@ export default async function Home() {
          <WhoToFollow/>
       </div>
     </div>
-    
   );
 }
