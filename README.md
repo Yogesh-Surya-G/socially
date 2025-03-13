@@ -2,10 +2,10 @@
 
 # 🌟 Socially
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-green?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-cyan?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![](https://img.shields.io/badge/NEXT.JS-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![](https://img.shields.io/badge/POSTGRESQL-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![](https://img.shields.io/badge/TAILWIND-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
 A modern full-stack social media platform that brings people together! 🚀
 
@@ -34,7 +34,7 @@ A modern full-stack social media platform that brings people together! 🚀
 - 🔄 React Query for efficient data fetching
 
 ### Backend
-- 🗄️ MongoDB for database
+- 🗄️ PostgreSQL for database
 - 🚀 Prisma as ORM
 - 🔑 Next-Auth for authentication
 - 📤 Upload Thing for file management
@@ -55,7 +55,7 @@ npm install
 3. Set up environment variables
 Create a `.env` file in the root directory and add:
 ```
-DATABASE_URL="your_mongodb_url"
+DATABASE_URL="your_postgresql_url"
 NEXTAUTH_SECRET="your_secret"
 NEXTAUTH_URL="http://localhost:3000"
 UPLOADTHING_SECRET="your_uploadthing_secret"
