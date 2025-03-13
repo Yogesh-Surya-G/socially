@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Socially
+
+A modern social media platform built with Next.js, TypeScript, Tailwind CSS, and MongoDB.
+
+## Features
+
+- User authentication with Next-Auth
+- Create, read, update and delete posts
+- Follow/unfollow users
+- Like and comment on posts
+- User profiles
+- Real-time notifications
+- Responsive design
+
+## Tech Stack
+
+- Next.js 15 with App Router
+- TypeScript
+- Tailwind CSS for styling
+- MongoDB & Prisma for database
+- Next-Auth for authentication
+- React Query for data fetching
+- Upload Thing for file uploads
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/socially.git
+cd socially
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables
+Create a `.env` file in the root directory and add:
+```
+DATABASE_URL="your_mongodb_url"
+NEXTAUTH_SECRET="your_secret"
+NEXTAUTH_URL="http://localhost:3000"
+UPLOADTHING_SECRET="your_uploadthing_secret"
+UPLOADTHING_APP_ID="your_uploadthing_app_id"
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server
+```bash
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+socially/
+├── app/               # Next.js app directory
+├── components/        # Reusable UI components
+├── lib/              # Utility functions and configurations
+├── prisma/           # Database schema and migrations
+└── public/           # Static assets
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License 📄
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License. ⚖️
