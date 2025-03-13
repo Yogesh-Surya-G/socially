@@ -25,19 +25,16 @@ A modern full-stack social media platform that brings people together! 🚀
 - Real-time notifications
 - Responsive design
 
-## 🛠️ Full Stack Tech Stack
+## 📁 Project Structure
 
-### Frontend
-- ⚡ Next.js 15 with App Router
-- 📘 TypeScript for type safety
-- 🎨 Tailwind CSS for modern styling
-- 🔄 React Query for efficient data fetching
-
-### Backend
-- 🗄️ PostgreSQL for database
-- 🚀 Prisma as ORM
-- 🔑 Next-Auth for authentication
-- 📤 Upload Thing for file management
+```
+socially/
+├── 📱 app/           # Next.js app directory
+├── 🧩 components/    # Reusable UI components
+├── 🛠️ lib/          # Utility functions and configs
+├── 💾 prisma/       # Database schema and migrations
+└── 📂 public/       # Static assets
+```
 
 ## Getting Started
 
@@ -69,16 +66,19 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-## 📁 Project Structure
+## 🛠️ Tech Stack
 
-```
-socially/
-├── 📱 app/           # Next.js app directory
-├── 🧩 components/    # Reusable UI components
-├── 🛠️ lib/          # Utility functions and configs
-├── 💾 prisma/       # Database schema and migrations
-└── 📂 public/       # Static assets
-```
+### Frontend
+- ⚡ Next.js 15 with App Router
+- 📘 TypeScript for type safety
+- 🎨 Tailwind CSS for modern styling
+- 🔄 React Query for efficient data fetching
+
+### Backend
+- 🗄️ PostgreSQL for database
+- 🚀 Prisma as ORM
+- 🔑 Next-Auth for authentication
+- 📤 Upload Thing for file management
 
 <div align="center">
 
