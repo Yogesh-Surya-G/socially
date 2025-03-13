@@ -9,12 +9,13 @@ import ProfilePageClient from "./ProfilePageClient";
 import { Metadata } from "next";
 
 type Props = {
-  params: { username: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: Promise<{ username: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const user = await getProfileByUsername(params.username);
+  const resolvedParams = await params;
+  const user = await getProfileByUsername(resolvedParams.username);
   if (!user) return {
       title: 'User not found',
       description: 'This user does not exist'
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProfilePage({ params }: Props) {
-  const user = await getProfileByUsername(params.username);
+  const resolvedParams = await params;
+  const user = await getProfileByUsername(resolvedParams.username);
 
   if (!user) notFound();
 
