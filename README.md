@@ -9,7 +9,7 @@
 
 A modern full-stack social media platform that brings people together! 🚀
 
-**🌐 [Try it live on Vercel](https://socially-demo.vercel.app)**
+**🌐 [Try it live on Vercel](https://besocially.vercel.app/)**
 
 > ✨ Feel free to register and start using the platform! The app is fully functional and ready for real users.
 
