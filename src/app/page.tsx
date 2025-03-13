@@ -4,7 +4,6 @@ import CreatePost from "@/components/CreatePost";
 import PostCard from "@/components/PostCard";
 import WhoToFollow from "@/components/WhoToFollow";
 import { currentUser } from "@clerk/nextjs/server";
-import { Post } from "@prisma/client";
 
 export default async function Home() {
   
@@ -13,6 +12,7 @@ export default async function Home() {
   const dbUserId = await getDbUserId();
 
   return (
+    (!dbUserId) ? null : 
     <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
       <div className="lg:col-span-6">
         {user ? <CreatePost/> : null}
@@ -26,5 +26,6 @@ export default async function Home() {
          <WhoToFollow/>
       </div>
     </div>
+    
   );
 }
