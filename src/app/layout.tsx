@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,6 +48,7 @@ export default function RootLayout({
                       </div>
                       <div className="lg:col-span-9"> 
                         {children}
+                        <Analytics/>
                       </div>
                     </div>
                   </div>
