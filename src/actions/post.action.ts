@@ -67,7 +67,6 @@ export async function getPosts(){
           }
       }) ;
       if(!posts) return []
-      console.log(posts)
       return posts
 
    } catch (error) {

@@ -8,7 +8,7 @@ import { toggleFollow } from '@/actions/user.action';
 
 function FollowButton({userId}: {userId: string}) {
   const [isLoading,setisLoading] = useState(false);
-  const [Follow,setFollow] = useState(false);
+  const [Follow,setFollow] = useState("follow");
 
   const handleFollow = async () => {  
       setisLoading(true);
@@ -16,10 +16,10 @@ function FollowButton({userId}: {userId: string}) {
          const response = await toggleFollow(userId);
          if(response?.follow === true){
           toast.success("User followed successfully");
-          setFollow(true)
+          setFollow("unfollow")
          }else{
-          toast.success("User followed successfully");
-          setFollow(true)
+          toast.success("User unfollowed successfully");
+          setFollow("follow")
          }
       } catch (error) {
         toast.error("Failed to follow user");
@@ -29,7 +29,7 @@ function FollowButton({userId}: {userId: string}) {
    }
   return (
     <Button size={"sm"} disabled={isLoading} variant= {'secondary'} onClick={handleFollow} className='w-20'>
-        {isLoading ? <LoaderIcon className='size-4 animate-spin [animation-duration:2000ms]'/> : `${Follow}`}
+        {isLoading ? <LoaderIcon className='size-4 animate-spin [animation-duration:2000ms]'/> : `${Follow} `}
     </Button>
   )
 }
