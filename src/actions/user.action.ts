@@ -125,6 +125,7 @@ export async function toggleFollow(targetuserId:string){
                   id:existingFollow.id
               }
           })
+          return {success:true,follow:false};
       }else{
           await prisma.$transaction([
             prisma.follows.create({
@@ -140,11 +141,14 @@ export async function toggleFollow(targetuserId:string){
                     creatorId: userId,
                 }
             })
-         ])   
+         ])
+         return {success:true,follow:true};
       }
-      return {success:true};
+      
    } catch (error) {
       console.log("Failed to follow",error);
       return {success:false, error:"Failed to Toggle Follow"};
+   } finally{
+      revalidatePath("/");
    }
 }

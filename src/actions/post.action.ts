@@ -65,18 +65,19 @@ export async function getPosts(){
                 }
              }
           }
-      })
+      }) ;
+      if(!posts) return []
       return posts
+
    } catch (error) {
-       console.log("Failed to get posts",error);
-       throw new Error("Failed to get posts");
+       return [];
    }
 }
 
 export async function toggleLike(postId: string) {
   try {
     const userId = await getDbUserId();
-    if (!userId) return;
+    if (!userId) return ;
 
     // check if like exists
     const existingLike = await prisma.like.findUnique({
