@@ -148,5 +148,7 @@ export async function toggleFollow(targetuserId:string){
    } catch (error) {
       console.log("Failed to follow",error);
       return {success:false, error:"Failed to Toggle Follow"};
+   } finally{
+      revalidatePath("/");
    }
 }

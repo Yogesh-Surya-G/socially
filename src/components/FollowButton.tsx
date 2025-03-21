@@ -5,10 +5,11 @@ import { Button } from './ui/button';
 import { LoaderIcon } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { toggleFollow } from '@/actions/user.action';
+import { revalidatePath } from 'next/cache';
 
 function FollowButton({userId}: {userId: string}) {
   const [isLoading,setisLoading] = useState(false);
-  const [Follow,setFollow] = useState("follow");
+  const [Follow,setFollow] = useState("Follow");
 
   const handleFollow = async () => {  
       setisLoading(true);
@@ -16,10 +17,10 @@ function FollowButton({userId}: {userId: string}) {
          const response = await toggleFollow(userId);
          if(response?.follow === true){
           toast.success("User followed successfully");
-          setFollow("unfollow")
+          setFollow("Unfollow")
          }else{
           toast.success("User unfollowed successfully");
-          setFollow("follow")
+          setFollow("Follow")
          }
       } catch (error) {
         toast.error("Failed to follow user");
