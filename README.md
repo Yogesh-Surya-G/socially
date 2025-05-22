@@ -17,7 +17,7 @@ A modern full-stack social media platform that brings people together! 🚀
 
 ## Features
 
-- User authentication with Next-Auth
+- User authentication with Click
 - Create, read, update and delete posts
 - Follow/unfollow users
 - Like and comment on posts
@@ -77,7 +77,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 ### Backend
 - 🗄️ PostgreSQL for database
 - 🚀 Prisma as ORM
-- 🔑 Next-Auth for authentication
+- 🔑 Clerk for authentication
 - 📤 Upload Thing for file management
 
 <div align="center">
