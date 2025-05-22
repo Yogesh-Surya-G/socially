@@ -17,7 +17,7 @@ A modern full-stack social media platform that brings people together! 🚀
 
 ## Features
 
-- User authentication with Click
+- User authentication with Clerk
 - Create, read, update and delete posts
 - Follow/unfollow users
 - Like and comment on posts
@@ -52,11 +52,10 @@ npm install
 3. Set up environment variables
 Create a `.env` file in the root directory and add:
 ```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_publishable_clerk_key"
+CLERK_SECRET_KEY="your_clerk_secret_key"
 DATABASE_URL="your_postgresql_url"
-NEXTAUTH_SECRET="your_secret"
-NEXTAUTH_URL="http://localhost:3000"
-UPLOADTHING_SECRET="your_uploadthing_secret"
-UPLOADTHING_APP_ID="your_uploadthing_app_id"
+UPLOADTHING_TOKEN="your_uploadthing_token"
 ```
 
 4. Run the development server
