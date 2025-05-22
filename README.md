@@ -71,7 +71,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 - ⚡ Next.js 15 with App Router
 - 📘 TypeScript for type safety
 - 🎨 Tailwind CSS for modern styling
-- 🔄 React Query for efficient data fetching
 
 ### Backend
 - 🗄️ PostgreSQL for database
